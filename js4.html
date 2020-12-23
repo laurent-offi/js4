@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+	<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Mon alerte Js</title>
+
+	</head>
+	<body>
+
+		<h2>Petit fenêtre s'ouvrant après un clic.</h2>
+
+        <form name="form">
+            <label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname"/>
+            <label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname"/>
+            <label for="city">Ville : </label><input type="text" name="city" id="city"/>
+            <button onclick="SetInfos()" name="submit" id="submit">Valider</button>
+        </form>
+		
+		<script>
+
+			function SetInfos() {
+ 				 var lastname = document.form.lastname.value;
+ 				 var firstname = document.form.lastname.value;
+ 				 var city = document.form.lastname.value;
+				  if (lastname == "" || firstname == "" || city == "") {
+				    window.alert("Veuillez remplir tous les champs.");
+				    return false;
+				  } else {
+				  	alert("Nom : " + lastname +  "\n"  + "Prénom : " + firstname + "\n"  + "Ville : " + city);
+						return false;
+				  }
+				}
+
+
+		</script>
+
+	</body>
+</html> 
